@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukul-saini-portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="navbar-logo">
+            <img alt="navbar logo" src='./assets/mukul-photo.png'>
+            <h1 class="navbar-heading">Mukul Saini</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="./#Home">Home</a>
+            <a href="./#Contact">Contact</a>
+            <a href="./#About">About</a>
+            <a href="./#blog">Blog</a>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="main-info">
+            <h1 class="main-heading">HEY, I'M  MUKUL SAINI</h1>
+            <p>A Frontend focused Web Developer building the Frontend of Websites and Web <br>Applications that leads to the success of the overall product.</p>
+            <div class="main-btn">
+               <button type="button">PROJECT</button>
+            </div> 
+        </div>
+        <div class="aside-icon">
+            <a target="_blank" href="https://www.linkedin.com/in/mukul-saini-04b553213/"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><i class="fa-solid fa-envelope"></i></a>
+            <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://github.com/mukulsaini0001"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <div class="about-me-container">
+            <div class="about-me">
+                <h1>ABOUT ME</h1>
+                <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+            </div>
+            <div class="about-skills">
+                <div class="know-me">
+                    <h2>Get to know me!</h2>
+                    <p>I'm a Frontend Web Developer building the Front-end of Websites <br>
+                        and Web Applications that leads to the success of the overall product.
+                        <br> Check out some of my work in the Projects section.</p>
+                </div>
+                <div class="skills">
+                    <h1>skills</h1>
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVA SCRIPT</span>
+                        <span>PYTHON</span>
+                        <span>SQL</span>
+                        <span>DATA STRUCTURE</span>
+                        <span>githup</span>
+                        <span>GIT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-btn">
+                <button>CONTACT</button>
+            </div>
+        </div>
+        <div class="contact-container">
+            <h1 class="contact-heading">CONTACT</h1>
+            <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as <br>possible</p>
+            
+            <form class="form-container">
+                <div>   
+                    <label for="name">Name</label>
+                    <input placeholder="Enter your name" type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input placeholder="Enter your email" type="text" id="email" name="Email">
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea  name="message" id="message"  rows="4" cols="50"></textarea>
+                </div>
+                <input class="btn-input" type="submit" value="Submit">
+            </form>
+        </div>
+    </main> 
+    <footer class="footer-container">
+        <div class="upper-container">
+            <div>
+            <h2>Mukul Saini</h2>
+            <p>A Frontend focused Web Developer building the Frontend of Websites and<br>
+                 Web Applications that leads to the success of the overall product</p>
+            </div>
+            <div class="icon-container">
+                <h2>SOCIAL</h2>
+                <a target="_blank" href="https://www.linkedin.com/in/mukul-saini-04b553213/"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://github.com/mukulsaini0001"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy;Copyright 2023. Made by Mukul Saini</p>
+        </div>
+    </footer>
+</body>
+<script>
+    class FormContainer{
+        constructor(formElement) {
+            this.form = formElement;
+            this.init();
+        }
+
+        init(){
+            this.form.addEventListener('submit', this.handleSubmit.bind(this));
+        }
+
+        handleSubmit(event) {
+            event.preventDefault();
+
+            const name = this.form.querySelector('#name').value;
+            const email = this.form.querySelector('#email').value;
+            const message = this.form.querySelector('#message').value;
+
+            alert(`Thank you, ${name}! Your message has been received.`);
+
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.form-container');
+    const FromContainer = new FormContainer(form);
+    });
+</script>
+</html>
